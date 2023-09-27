@@ -1,0 +1,13 @@
+mark(p):
+	p = marked	
+HORN_SAT(phi):
+	phi = phi_1 and phi_2 and ... phi_k, where phi_i is horn clause
+	for p in phi:
+		mark(p) if p==True
+	while (p1 and p2 and... pk --> q of phi such that all p_j are marked but q is not marked)
+	do {mark(q)}
+	if False is marked:
+		return not satisfiable
+	return satisfiable
+
+this is linear time. Note: DNF_SAT was polynomial time, and CNF_SAT is NP complete, while CNF_validity is polynomial

@@ -1,7 +1,7 @@
 isValidCNF(phi):
 	phi = C1 and C2 and C3 ... and Ck
 	for i in range 1,k:
-		if not(isValidDisCalue(Ci)) return False;
+		if not(isValidDisClause(Ci)) return False;
 	return True;
 
 isValidDisClause(C):
@@ -17,3 +17,4 @@ isValidDisClause(C):
 					return True;
 	return False;
 	
+The complexity of this is m^2*n where n is the number of conjunctive clause (Ci) and m is the maximum number of literals (Li) in some Ci. This is significantly better than the complexity of checking validity of a formula using truth table (this method entails checking all entries of truth table to see that the output evaluates to True for all assignment to Ci, which is (2^k)*(n*m) where k is the different propositional atoms used in the formula.
