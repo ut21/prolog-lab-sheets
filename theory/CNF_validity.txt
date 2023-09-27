@@ -1,0 +1,19 @@
+isValidCNF(phi):
+	phi = C1 and C2 and C3 ... and Ck
+	for i in range 1,k:
+		if not(isValidDisCalue(Ci)) return False;
+	return True;
+
+isValidDisClause(C):
+	C = L1 or L2 or ... Lk
+	for i in range 1,k:
+		if (Li is p):
+			for j in range i,k:
+				if (Lj is not p):
+					return True;
+		else:
+			for j in range i,k:
+				if (Lj is p):
+					return True;
+	return False;
+	
