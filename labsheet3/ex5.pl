@@ -8,4 +8,4 @@ directTrain(nancy,metz).
 
 travelBetween(X,Y) :- directTrain(X,Y) ; directTrain(Y,X).
 travelBetween(X,Y) :- directTrain(X,Z), travelBetween(Z,Y).
-travelBetween(X,Y) :- directTrain(Z,X), travelBetween(Z,Y).
+travelBetween(X,Y) :- directTrain(Z,X), travelBetween(Y,Z).
